@@ -240,22 +240,44 @@ The quote file lives here:
 assets/quotes/quotes.json
 ```
 
-Each quote should keep a consistent shape. Common fields include:
+> [!WARNING]
+> Quote entries must follow the exact attribution structure and JSON schema below. App features depend on consistent field names and valid formatting. Incorrect structure, missing keys, or broken JSON may break functionality or cause app failure.
 
-```json
+**When documenting quotes, use the following structure and attribution rules:**<br>
+
+- speaker = who says it
+- author = who created it
+- source = where it appears
+
+**Each quote entry must follow this JSON schema:**
+
+```JSON
 {
-  "id": "example-id",
-  "text": "The quote text goes here.",
-  "author": "Author Name",
-  "source": "Book, speech, show, or context",
-  "tags": ["tag-one", "tag-two"]
+  "id": "Unique numeric ID",
+  "text": "Quote text",
+  "speaker": "Character, speaker, or attributed voice (`null` if unknown or same as author)",
+  "author": "Original author, creator, or source authority (`null` if unknown)",
+  "source": "Book, speech, film, show, video, or contextual source (`null` if unknown)",
+  "tags": ["tag-one", "tag-two", "tag-three", "tag-four"]
 }
+```
+
+Example entry:
+```JSON
+{
+    "id": 2,
+    "text": "It's no use going back to yesterday because I was a different person then.",
+    "speaker": "Alice",
+    "author": "Lewis Carroll",
+    "source": "Alice in Wonderland",
+    "tags": ["growth", "change"]
+  },
 ```
 
 After editing `quotes.json`, refresh the browser or load another quote. The server reloads quotes often, so most quote-file changes show up quickly.
 
 > [!TIP]
-> Keep `id` values unique. Favorites are tracked by quote `id`, so duplicate IDs can make favorites behave strangely.
+> Keep `id` values unique by assigning them chronologically. Favorites are tracked by quote `id`, so duplicate IDs can make favorites behave strangely.
 
 ---
 
