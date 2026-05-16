@@ -1,24 +1,3 @@
----
-title: Quote of the Day App README
-description: User guide for installing, launching, customizing, and maintaining the local Quote of the Day macOS app.
-created: 2026-05-16
-time: 11:20 AM
-tags:
-  - quotes
-  - macos
-  - local-app
-  - readme
-type: app-readme
-status: active
-updated: 2026-05-16T11:20:00.000Z
----
-
-## Links
-
-[]
-
----
-
 # Quote of the Day App
 
 ## Local Quote Browser For Mac
@@ -33,7 +12,7 @@ The app is designed for quick use:
 - search the full quote library
 - search only favorites
 - click tags to search by theme
-- edit the quote JSON file when you want to add or clean up quotes
+- modify the quote JSON file when you want to add, remove, or edit quotes
 
 > [!NOTE]
 > This is a local app. It runs a small Python server on your machine at `http://localhost:8000`. Your quote file lives on disk, and favorites live in the browser profile you use with the app.
@@ -85,7 +64,7 @@ Main files:
 | `assets/quotes/quotes.json` | Main quote library. Edit this file to add, remove, or update quotes. |
 | `assets/icons/` | Icon source files used by the app bundle or future icon updates. |
 | `logs/quotes_web/web_activity.log` | In-app activity log for searches, random quotes, file opens, and shutdown events. |
-| `/tmp/quotes_web.log` | Launcher/server log written by the Automator app wrapper. Useful for startup issues. |
+| `/tmp/quotes_web.log` | Launcher/server log written by the Automator app wrapper. Useful for debugging startup issues. |
 
 > [!IMPORTANT]
 > Keep the folder structure intact. The launcher expects the app to live at `$HOME/Applications/dev/quotes` unless you update the launcher path inside `quotes.app`.
@@ -360,15 +339,3 @@ That is okay. The server can keep running in the background. Click `quotes.app` 
 Use Stop Server when you want to fully end the server process.
 
 ---
-
-## Validation Checklist
-
-- [ ] `quotes.app` opens the browser.
-- [ ] Random Quote loads a quote.
-- [ ] Search returns results.
-- [ ] Favorites count updates after starring or unstarring a quote.
-- [ ] Favorites Search filters only starred quotes.
-- [ ] Clicking a tag in Favorites Search keeps the search inside Favorites.
-- [ ] Stop Server shows the stopped page and releases port `8000`.
-- [ ] Developer Mode opens `assets/quotes/quotes.json`.
-
