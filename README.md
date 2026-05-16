@@ -265,13 +265,13 @@ assets/quotes/quotes.json
 Example entry:
 ```JSON
 {
-    "id": 2,
-    "text": "It's no use going back to yesterday because I was a different person then.",
-    "speaker": "Alice",
-    "author": "Lewis Carroll",
-    "source": "Alice in Wonderland",
-    "tags": ["growth", "change"]
-  },
+  "id": 2,
+  "text": "It's no use going back to yesterday because I was a different person then.",
+  "speaker": "Alice",
+  "author": "Lewis Carroll",
+  "source": "Alice in Wonderland",
+  "tags": ["growth", "change", "reflection", "self-awareness"]
+}
 ```
 
 After editing `quotes.json`, refresh the browser or load another quote. The server reloads quotes often, so most quote-file changes show up quickly.
