@@ -59,7 +59,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>nohup python3 /Users/kirk/Applications/dev/quotes/quotes_web.py &gt;&gt;/tmp/quotes_web.log 2&gt;&amp;1 &amp;</string>
+					<string>nohup python3 /$HOME/Applications/dev/quotes/quotes_web.py &gt;&gt;/tmp/quotes_web.log 2&gt;&amp;1 &amp;</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -68,21 +68,6 @@
 					<string>/bin/zsh</string>
 					<key>source</key>
 					<string></string>
-				</dict>
-				<key>ActionRuntimeParameters</key>
-				<dict>
-					<key>COMMAND_STRING</key>
-					<string>nohup python3 /Users/kirk/Applications/dev/quotes/quotes_web.py &gt;&gt;/tmp/quotes_web.log 2&gt;&amp;1 &amp;</string>
-					<key>CheckedForUserDefaultShell</key>
-					<true/>
-					<key>inputMethod</key>
-					<integer>0</integer>
-					<key>shell</key>
-					<string>/bin/zsh</string>
-					<key>source</key>
-					<string></string>
-					<key>temporary items path</key>
-					<string>/var/folders/y3/y5p__vms6_18mj008z0s5rbr0000gn/T/70426E2C-B8F0-4205-8766-3B0EF9C138DF/1/com.apple.RunShellScript</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.RunShellScript</string>
